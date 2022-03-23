@@ -1,6 +1,7 @@
 <?php 
 namespace App\Controller;
 
+use Cake\Http\Exception\BadRequestException;
 use Cake\Http\Exception\HttpException;
 use Cake\Http\Exception\InternalErrorException;
 use Cake\Http\Response;
@@ -55,7 +56,7 @@ class ContactsController extends AppController
         $contact = $this->Contacts->newEntity($this->request->getData());
         $errors = $contact->getErrors();
         if ($errors) { //if errors return error
-            throw new HttpException(json_encode($errors), 400);
+            throw new BadRequestException(json_encode($errors));
         }
 
         // Save to database and return response

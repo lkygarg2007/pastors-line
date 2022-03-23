@@ -21,7 +21,7 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 
 Router::scope('/contacts', function (RouteBuilder $routes) {
-    $routes->setExtensions(['json']);
+    $routes->setExtensions(['json', 'xml']);
     $routes->get('/index', ['controller' => 'Contacts', 'action' => 'index']);
     $routes->get('/index_ext', ['controller' => 'Contacts', 'action' => 'index_ext']);
     $routes->post('/index', ['controller' => 'Contacts', 'action' => 'add']);
