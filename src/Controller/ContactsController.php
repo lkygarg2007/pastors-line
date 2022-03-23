@@ -1,7 +1,6 @@
 <?php 
 namespace App\Controller;
 
-use Cake\Http\Exception\BadRequestException;
 use Cake\Http\Exception\HttpException;
 use Cake\Http\Exception\InternalErrorException;
 use Cake\Http\Response;
